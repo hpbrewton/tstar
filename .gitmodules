@@ -1,0 +1,3 @@
+[submodule "PROGNOSIS"]
+	path = PROGNOSIS
+	url = https://github.com/UCL-PPLV/PROGNOSIS.git
