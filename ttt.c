@@ -17,6 +17,13 @@ typedef struct automata_t {
     char *accepting_state; // state -> 0, if accepting, non-0, if accepting
 } automata_t;
 
+void 
+sort_ptrs(void *p, int size) {
+    for (int i = 0; i < size-1; ++i) {
+        if (p[i] < p[i+1])
+    }
+}
+
 int 
 size(tree_t *t) {
     if (is_leaf(t)) {return 1;}
@@ -32,8 +39,6 @@ build_automata(tree_t *t, automata_t *a) {
     a->size = size(t);
     a->next_state = malloc(sizeof(int)*(a->alpabet_size)*size);
     a->accepting_state = malloc(sizeof(char)*size);
-
-
 }
 
 int 
