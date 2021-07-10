@@ -1,0 +1,32 @@
+A common kind of automata are ones over an alphabet over a finite products of integers.
+We will call these field machines.
+Examples include many internet protocols and simple data manipulation funcitons.
+Automata learning is a well known tool for extracting a model of a machine in a black box environment.
+Because field machines have a non-finite alphabet, they can not be learned using these methods.
+However, if instead of learning an automata over the product of integers themselves and instead over updates to those integers we may learn more succesfully.
+If we limit ourselves to a finite library of updates we can then recover learnability.
+
+We propose instead of learning field automata we learn their derivatives: that is the updates done to their fields.
+We consider 5 kinds of updates:
+    - big increase (increase of more than 1)
+    - increment
+    - persist
+    - decement 
+    - big decrease (decrease of more than 1)
+We can then learn as we normally would.
+
+
+Abstract. 
+Symbolic automata allow transitions to carry predicates over rich alphabet theories, such as linear arithmetic, and therefore extend classic automata to operate over infinite alphabets, such as the set of rational numbers. 
+In this paper, we study the foundational problem of learning symbolic automata. 
+We first present Λ∗, a symbolic automata extension of Angluin’s L∗ algorithm for learning regular languages. 
+Then, we define notions of learnability that are parametric in the alphabet theories of the symbolic automata and show how these notions nicely compose. 
+Specifically, we show that if two alphabet theories are learnable, then the theory accepting the Cartesian product or disjoint union of their alphabets is also learnable. 
+Using these properties, we show how existing algorithms for learning automata over large alphabets nicely fall in our framework. 
+Finally, we implement our algorithm in an open-source library and evaluate it on existing automata learning benchmarks.
+
+Field automata allow transitions to execute operations over finite registers, such as increment, decement, persist, and randomly set.
+They also allow the use of values in registers for setting values and gaurding expressions. 
+In this paper, we study the problem of learning field automata.
+We first present F*, a field automata exstension of Angluin’s L* algorithm for learning regular languages.
+We implement the algorithm in an open-source tool and evaluate it on network protocols.
